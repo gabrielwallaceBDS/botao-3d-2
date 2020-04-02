@@ -1,0 +1,44 @@
+$color: #ffe9e9;
+$color-dark: darken($color, 10%);
+$color-border: rgba(darken($color,60%), .45);
+$color-text: darken($color, 85%);
+
+
+body {
+    align-items: center;
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    line-height: 1.5;
+    margin: 0;
+    min-height: 100vh;
+}
+.c-button{
+    background: red;
+    border-radius: 3em;
+    border: 0;
+    border: 3px solid red;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    position: relative;
+    text-transform: uppercase;
+    transform-style: preserve-3d;
+    transition: all 150ms cubic-bezier(.175, .885, .32, 1.275);]
+}
+&::before {
+    background: $color-dark;
+    border-radius:inherit;
+    box-shadow:
+       0 0 0 2px $color-border,
+       0  .6em 0 0 rgba($color, .6);
+    content: ``;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translate3d(0, .75em, -1em);
+    transition: all 150ms cubic-bezier(.175, .885, .32, 1.275);
+    width: 100%;
+}
